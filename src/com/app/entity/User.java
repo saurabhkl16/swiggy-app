@@ -1,5 +1,7 @@
 package com.app.entity;
 
+import com.app.util.IdGenerator;
+
 public class User {
     private int user_id;
     private String name;
@@ -7,6 +9,7 @@ public class User {
     private String address;
 
     public User(String name,String mobile,String address){
+        this.user_id = IdGenerator.getUserIdCounter();
         this.name = name;
         this.mobile = mobile;
         this.address = address;

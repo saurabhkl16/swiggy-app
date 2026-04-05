@@ -1,6 +1,9 @@
 package com.app;
 
 import com.app.constants.AppConstants;
+import com.app.entity.Item;
+import com.app.entity.Menu;
+import com.app.entity.Restaurant;
 import com.app.entity.User;
 import com.app.services.UserService;
 
@@ -9,9 +12,17 @@ import java.util.Scanner;
 class Main {
     private static Scanner sc = new Scanner(System.in);
     private static UserService us = new UserService();
-    private static boolean exit = false;
+    private static boolean exit = true;
 
     public static void main(String[] args) {
+        Menu m = new Menu("Veg");
+        Item item = new Item("Vada pav","Very testy",10,true);
+        m.addItem(item);
+
+        Restaurant gulabo = new Restaurant("Gulabo","dsf dffdf fddf",m);
+        System.out.println(gulabo);
+
+
         while (!exit) {
             System.out.println(AppConstants.MAIN_MENU);
             System.out.print("Enter your choice: ");
