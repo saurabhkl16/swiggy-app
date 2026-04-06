@@ -16,4 +16,11 @@ public class AppConstants {
             3. Main Menu
             0. Exit
             """;
+
+    public static final String LOGIN = """
+            ===== LOGIN MENU =====
+            1. Restaurant List
+            2. My Cart
+            0. LogOut
+            """;
 }
