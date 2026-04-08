@@ -4,9 +4,10 @@
 *.iws
 .idea/
 
-# Build output
-/out/
-/bin/
+# Gradle
+.gradle/
+build/
+out/
 
 # Logs
 *.log
@@ -17,3 +18,18 @@ Thumbs.db
 
 # Java class files
 *.class
+
+# Eclipse (if ever used)
+.project
+.classpath
+.settings/
+
+# Maven (if project uses it somewhere)
+target/
+
+# Temporary files
+tmp/
+*.tmp
+
+# Environment files
+.env
