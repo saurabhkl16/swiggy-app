@@ -1,5 +1,7 @@
 package com.app;
 
+import com.app.controller.LoginHandler;
+import com.app.controller.RestaurantHandler;
 import com.app.controller.SignupHandler;
 import com.sun.net.httpserver.HttpServer;
 
@@ -12,6 +14,8 @@ public class Main {
         try {
             HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
             server.createContext("/signup", new SignupHandler());
+            server.createContext("/login", new LoginHandler());
+            server.createContext("/restaurants", new RestaurantHandler());
             server.setExecutor(null);
             server.start();
             System.out.println("Server started on http://localhost:8080/signup");
